@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Home Page</title>
+    <meta name="description" content="Landing page for WDD231 course">
+    <meta name="author" content="Efrain O."> 
+    <link rel="stylesheet" href="styles/base.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+        <script src="scripts/main.js" defer></script>
+    </head>
+<body>
+    <header>
+            <img src="images/me.webp" alt="Efrain O">
+            <h1><span>Efrain O</span></h1>
+            <nav>
+                <div class="hamburger" onclick="toggleMenu()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Chamber</a></li>
+                    <li><a href="#">Final</a></li>
+                    <li><a href="#">GitHub Profile</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+            </nav>
+    </header>
+    <main>
+        <h1 style="color: black;">Home</h1>
+        <section class="course-Work-card">
+            <h2>Course Work</h2>
+        </section>
+        <section class="mexico-card">
+            <h2>Mexico City</h2>
+            <img src="images/mexico_city.webp" alt="Mexico City">
+        </section>
+        <section class="certificate-card">
+            <h2>Web and Computer Programming Certificate</h2>
+        </section>
+    </main>
+    <footer>
+        <p>© <span id="currentYear"></span> Efrain Ochoa, MEX 🇲🇽 </p>
+        <p>Last modification: <span id="lastModified"></span></p>
+    </footer>
+    
+</body>
+</html>

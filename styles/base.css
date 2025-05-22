@@ -1,0 +1,181 @@
+.course-card {
+    color: #000;
+}
+
+:root {
+    --primary-color: #3b574e;
+    --accent-color: #7a2e1a;
+    --background-color: #ffffff;
+    --text-color: #ffffff;
+    --nav-bg: #000;
+    --nav-text: #fff;
+    --nav-highlight: #e2b714;
+    --shadow: rgba(0, 0, 0, 0.2);
+    --radius: 8px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Comfortaa', 'Roboto';
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+header img {
+    width: 80px;
+    height: 80px;
+    border-radius: 70%;
+    object-fit: cover;
+}
+
+header h1 span {
+    display: block;
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    background-color: var(--nav-bg);
+    list-style: none;
+    padding: 0.5rem 0;
+    flex-wrap: wrap;
+}
+
+nav li {
+    margin: 0 1rem;
+}
+
+nav a {
+    color: var(--nav-text);
+    text-decoration: none;
+    padding: 0.5rem;
+    display: block;
+    transition: background 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--nav-highlight);
+}
+
+main {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+}
+
+
+
+section {
+    background-color: var(--primary-color);
+    padding: 1rem;
+    border-radius: var(--radius);
+    box-shadow: 0 2px 5px var(--shadow);
+}
+
+.mexico-card img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    display: block;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* Certificate Grid */
+
+.certificate-card {
+    grid-column: 1 / -1;
+}
+
+.certificate-card h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.certificate-card .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    text-align: center;
+}
+
+.certificate-card button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    border-radius: var(--radius);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.certificate-card button:hover {
+    background-color: #5e2315;
+}
+
+/* Responsive stuff */
+
+/* Hamburger menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.hamburger div {
+    font-size: 2rem;
+    width: 25px;
+    height: 3px;
+    background-color: var(--nav-text);
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+.nav-open nav ul {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    border: #fff;
+}
+
+@media (max-width: 600px) {
+    .hamburger {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav li {
+        margin: 0.5rem 0;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+}
