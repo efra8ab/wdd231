@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   async function loadMembers() {
-    const resp = await fetch('/chamber/data/members.json');
+    const resp = await fetch('data/members.json');
     const members = await resp.json();
     const grid = document.querySelector('.directory-grid');
     grid.innerHTML = '';
