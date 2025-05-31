@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Taquería El Fogoncito",
+        "address": "Av. Insurgentes Sur 810, Del Valle, Ciudad de México, 03100",
+        "phone": "(55) 5584-1234",
+        "website": "https://elfogoncito.com.mx",
+        "image": "fogoncito.webp",
+        "membershipLevel": 3
+    },
+    {
+        "name": "Panadería La Esperanza",
+        "address": "C. de Durango 145, Roma Norte, Ciudad de México, 06700",
+        "phone": "(55) 5276-7890",
+        "website": "https://panaderialaesperanza.mx",
+        "image": "esperanza.webp",
+        "membershipLevel": 2
+    },
+    {
+        "name": "Librería Gandhi Polanco",
+        "address": "Av. Presidente Masaryk 513, Polanco, Ciudad de México, 11560",
+        "phone": "(55) 5281-4567",
+        "website": "https://gandhi.com.mx",
+        "image": "gandhi.webp",
+        "membershipLevel": 3
+    },
+    {
+        "name": "Café de Tacuba",
+        "address": "Tacuba 28, Centro Histórico, Ciudad de México, 06010",
+        "phone": "(55) 5510-4242",
+        "website": "https://cafedetacuba.com.mx",
+        "image": "cafe_tacuba.webp",
+        "membershipLevel": 3
+    },
+    {
+        "name": "Florería Jazmín",
+        "address": "Av. Coyoacán 1625, Del Valle, Ciudad de México, 03100",
+        "phone": "(55) 5012-3456",
+        "website": "https://floreriajazmin.mx",
+        "image": "jazmin.webp",
+        "membershipLevel": 1
+    },
+    {
+        "name": "Agencia Mundo Maya",
+        "address": "Liverpool 155, Piso 3, Juárez, Ciudad de México, 06600",
+        "phone": "(55) 5522-7788",
+        "website": "https://mundomaya.com.mx",
+        "image": "mundo_maya.webp",
+        "membershipLevel": 1
+    },
+    {
+        "name": "Centro Zen Yoga",
+        "address": "C. Génova 19, Juárez, Ciudad de México, 06600",
+        "phone": "(55) 5564-3210",
+        "website": "https://centrozenyoga.mx",
+        "image": "zen.webp",
+        "membershipLevel": 2
+    }
+]

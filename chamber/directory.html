@@ -10,14 +10,51 @@
     <meta property="og:description" content="Chamber Directoy">
     <meta property="og:image" content="images/mexico_city.webp">
     <meta property="og:url" content="https://efra8ab.github.io/wdd231/chamber/directory">
-    <link rel="icon" type="image/x-icon" href="favicon.ico" sizes="32x32">
+    <link rel="icon" type="image/x-icon" href="/chamber/images/favicon.ico" sizes="32x32">
+    <link rel="stylesheet" href="/chamber/styles/directory.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <script src="/chamber/scripts/directory.js" defer></script>
 </head>
 <body>
-    
+    <header>
+        <div class="header-brand">
+            <img src="/chamber/images/cdmx_logo.webp" alt="Mexico City Logo">
+            <div class="brand-text">
+                <h2>Mexico City</h2>
+                <p>Chamber of Commerce</p>
+            </div>
+        </div>
+    </header>
+    <nav aria-label="Main navigation">
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="../wdd231/chamber/directory.html" class="active" aria-current="page">Directory</a></li>
+            <li><a href="#">Join</a></li>
+            <li><a href="#">Discover</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Business Directory</h1>
+        <div class="view-toggle">
+            <button id="grid-view">Grid View</button>
+            <button id="list-view">List View</button>
+        </div>
+        <section class="directory-grid">
+        </section>
+    </main>
+    <footer>
+        <p>© <span id="currentYear"></span> Efrain Ochoa, MEX 🇲🇽 </p>
+        <p>Last modification: <span id="lastModified"></span></p>
+    </footer>
+
 </body>
 </html>
