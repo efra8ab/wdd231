@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
       card.innerHTML = `
         <header><h3>${m.name}</h3></header>
         <div class="card-image">
-          <img src="/chamber/images/${m.image}" alt="${m.name}">
+          <img src="images/${m.image}" alt="${m.name}">
         </div>
         <div class="card-details">
           <p class="address">${m.address}</p>
