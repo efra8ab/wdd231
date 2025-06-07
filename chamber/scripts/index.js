@@ -1,4 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const tempToggle = document.getElementById('temp-toggle');
+    if (tempToggle) {
+        tempToggle.addEventListener('click', () => {
+            document.body.classList.toggle('celsius');
+            const useCelsius = document.body.classList.contains('celsius');
+            tempToggle.textContent = useCelsius ? 'Show °F' : 'Show °C';
+            setTimeout(() => {
+                getWeather();
+            }, 10);
+        });
+
+        const useCelsius = document.body.classList.contains('celsius');
+        tempToggle.textContent = useCelsius ? 'Show °F' : 'Show °C';
+    }
+
     getWeather();
     getSpotlights();
 });
@@ -7,7 +22,9 @@ async function getWeather() {
     const apiKey = 'YOUR_OPENWEATHERMAP_API_KEY';
     const lat = 19.4326;
     const lon = -99.1332;
-    const units = 'imperial'; 
+    const useCelsius = document.body.classList.contains('celsius');
+    const units = useCelsius ? 'metric' : 'imperial';
+    console.log('Using units:', units);
     const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=${units}&appid=${apiKey}`;
 
     try {
@@ -15,7 +32,6 @@ async function getWeather() {
         if (!response.ok) throw new Error('Weather data fetch failed');
         const data = await response.json();
 
-        // ---- Current Weather ----
         const currentTempEl = document.querySelector('.current-weather .temp');
         const currentDescEl = document.querySelector('.current-weather .condition');
         const highLowEl = document.querySelector('.current-weather .highlow');
@@ -25,14 +41,16 @@ async function getWeather() {
         const weatherIconEl = document.querySelector('.current-weather .weather-icon');
 
         const current = data.current;
+        console.log(`API returned current temp: ${current.temp}`);
+        console.log(`Today's high: ${data.daily[0].temp.max}, low: ${data.daily[0].temp.min}`);
         const todayHigh = data.daily[0].temp.max;
         const todayLow = data.daily[0].temp.min;
         const description = current.weather[0].description;
         const iconCode = current.weather[0].icon;
 
-        currentTempEl.textContent = `${Math.round(current.temp)}°`;
+        currentTempEl.textContent = `${Math.round(current.temp)}°${useCelsius ? 'C' : 'F'}`;
         currentDescEl.textContent = capitalize(description);
-        highLowEl.textContent = `High: ${Math.round(todayHigh)}°  |  Low: ${Math.round(todayLow)}°`;
+        highLowEl.textContent = `High: ${Math.round(todayHigh)}°${useCelsius ? 'C' : 'F'}  |  Low: ${Math.round(todayLow)}°${useCelsius ? 'C' : 'F'}`;
         humidityEl.textContent = `Humidity: ${current.humidity}%`;
 
         const sunriseTime = new Date(current.sunrise * 1000).toLocaleTimeString('en-US', {
@@ -55,7 +73,7 @@ async function getWeather() {
         weatherIconEl.setAttribute('alt', description);
 
         const forecastListEl = document.querySelector('.weather-forecast ul');
-        forecastListEl.innerHTML = ''; 
+        forecastListEl.innerHTML = '';
 
         for (let i = 1; i <= 3; i++) {
             const dayData = data.daily[i];
@@ -65,7 +83,7 @@ async function getWeather() {
             const low = Math.round(dayData.temp.min);
 
             const li = document.createElement('li');
-            li.innerHTML = `<strong>${weekday}:</strong> High ${high}° / Low ${low}°`;
+            li.innerHTML = `<strong>${weekday}:</strong> High ${high}°${useCelsius ? 'C' : 'F'} / Low ${low}°${useCelsius ? 'C' : 'F'}`;
             forecastListEl.appendChild(li);
         }
     } catch (error) {
