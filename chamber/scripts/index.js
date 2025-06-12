@@ -169,3 +169,6 @@ function toggleMenu() {
     document.body.classList.toggle('nav-open');
     hamburger.classList.toggle('open');
 }
+
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+document.getElementById('lastModified').textContent = new Date(document.lastModified).toLocaleDateString();

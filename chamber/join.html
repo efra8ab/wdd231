@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mexico City Chamber of Commerce - Join Us</title>
-    <meta name="description" content="Home page of the Mexico City Chamber of Commerce" />
+    <meta name="description" content="Apply for membership at the Mexico City Chamber of Commerce." />
     <meta name="author" content="Efrain Ochoa" />
     <meta property="og:title" content="Mexico City Chamber of Commerce" />
-    <meta property="og:description" content="Welcome to the Mexico City Chamber of Commerce" />
+    <meta property="og:description" content="Apply for membership at the Mexico City Chamber of Commerce." />
     <meta property="og:image" content="https://efra8ab.github.io/wdd231/chamber/images/mexico_city.webp">
-    <meta property="og:url" content="https://efra8ab.github.io/wdd231/chamber/index.html" />
+    <meta property="og:url" content="https://efra8ab.github.io/wdd231/chamber/join.html" />
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" sizes="32x32" />
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/join.css">
@@ -31,7 +31,7 @@
     </header>
     
     <nav aria-label="Main navigation">
-        <div class="hamburguer" onclick="toggleMenu()">
+        <div class="hamburger" onclick="toggleMenu()">
             <div></div><div></div><div></div>
         </div>
         <ul>
@@ -44,55 +44,153 @@
 
     <main>
         <h1>Become a Chamber Member</h1>
-        <form id="joinForm" class="join-form" method="get" action="thankyou.html">
-            <label title="Please enter your first name">
-                First Name
-                <input type="text" name="firstName" required autocomplete="first-name">
-            </label>
-            
-            <label title="Please enter your last name">
-                Last Name
-                <input type="text" name="lastName" required autocomplete="last-name">
-            </label>
-            
-            <label title="Your title within the organization">
-                Organizational Title
-                <input type="text" name="organizationTitle" autocomplete="organization-title" pattern="[A-Za-z\\s\\-]{7,}" placeholder="Marketing Manager">
-            </label>
+        <div class="join-wrapper">
+            <form id="joinForm" class="join-form" method="get" action="thankyou.html">
+                    <label title="Please enter your first name">
+                        First Name
+                        <input type="text" name="firstName" required autocomplete="given-name" title="First Name">
+                    </label>
 
-            <label title="To follow up with your request">
-                Email Address
-                <input type="email" name="email" required autocomplete="email" placeholder="you@example.com">
-            </label>
+                    <label title="Please enter your last name">
+                        Last Name
+                        <input type="text" name="lastName" required autocomplete="family-name" title="Last Name">
+                    </label>
 
-            <label title="Best phone number to get in touch">
-                Phone Number
-                <input type="tel" required name="phone" autocomplete="tel">
-            </label>
+                    <label title="Your title within the organization">
+                        Organizational Title
+                        <input type="text" name="organizationTitle" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}" placeholder="Marketing Manager" title="Organizational Title">
+                    </label>
 
-            <label title="Organisation or business name">
-                Business / Organisation Name
-                <input type="text" name="organization" required autocomplete="organization" />
-            </label>
+                    <label title="To follow up with your request">
+                        Email Address
+                        <input type="email" name="email" required autocomplete="email" placeholder="you@example.com" title="Email">
+                    </label>
 
-            <label title="Select a membership level">
-                Membership Level
-                <select name="membershipLevel" id="membershipLevel" required>
-                    <option value="np">NP - Non-profit (Free)</option>
-                    <option value="bronze">Bronze</option>
-                    <option value="silver">Silver</option>
-                    <option value="gold">Gold</option>
-                </select>
-            </label>
+                    <label title="Best phone number to get in touch">
+                        Phone Number
+                        <input type="tel" required name="phone" autocomplete="tel" title="Phone">
+                    </label>
 
-            <label title="Tell us about your organization">
-                Organization Description
-                <textarea name="description" rows="4" placeholder="Brief description"></textarea>
-            </label>
+                    <label title="Organisation or business name">
+                        Business / Organisation Name
+                        <input type="text" name="organization" required autocomplete="organization" title="Business / Organisation Name" />
+                    </label>
 
-            <input type="hidden" name="timestamp" id="timestamp">
-            <input type="submit" value="Submit Application">
-        </form>
+                    <label title="Select a membership level">
+                        Membership Level
+                        <select name="membershipLevel" id="membershipLevel" required>
+                            <option value="np">NP - Non-profit (Free)</option>
+                            <option value="bronze">Bronze</option>
+                            <option value="silver">Silver</option>
+                            <option value="gold">Gold</option>
+                        </select>
+                    </label>
+
+                    <label title="Tell us about your organization">
+                        Organization Description
+                    <textarea name="description" rows="4" placeholder="Brief description"></textarea>
+                </label>
+
+                <input type="hidden" name="timestamp" id="timestamp">
+                <input type="submit" value="Submit Application">
+            </form>
+
+        <section class="membership-cards">
+            <article class="membership-card np">
+                <h3>NP Membership</h3>
+                <p>No fee – perfect for charities and NGOs.</p>
+                <a href="#npModal" class="info-link" data-modal="npModal">Benefits &rsaquo;</a>
+            </article>
+        
+            <article class="membership-card bronze">
+                <h3>Bronze Membership</h3>
+                <p>Great starter package for small businesses.</p>
+                <a href="#bronzeModal" class="info-link" data-modal="bronzeModal">Benefits &rsaquo;</a>
+            </article>
+        
+            <article class="membership-card silver">
+                <h3>Silver Membership</h3>
+                <p>Extra visibility and event discounts.</p>
+                <a href="#silverModal" class="info-link" data-modal="silverModal">Benefits &rsaquo;</a>
+            </article>
+        
+            <article class="membership-card gold">
+                <h3>Gold Membership</h3>
+                <p>Maximum exposure and priority perks.</p>
+                <a href="#goldModal" class="info-link" data-modal="goldModal">Benefits &rsaquo;</a>
+            </article>
+        </section>
+
+        <dialog id="npModal">
+            <h3>NP Membership Benefits</h3>
+            <ul>
+                <li>Directory listing</li>
+                <li>Invitations to networking breakfasts</li>
+                <li>Access to training webinars</li>
+            </ul>
+            <button type="button" class="close" aria-label="Close dialog">Close</button>
+        </dialog>
+        
+        <dialog id="bronzeModal">
+            <h3>Bronze Membership Benefits</h3>
+            <ul>
+                <li>All NP perks</li>
+                <li>1 free expo booth per year</li>
+                <li>Social-media spotlight feature</li>
+            </ul>
+            <button type="button" class="close" aria-label="Close dialog">Close</button>
+        </dialog>
+        
+        <dialog id="silverModal">
+            <h3>Silver Membership Benefits</h3>
+            <ul>
+                <li>All Bronze perks</li>
+                <li>2 spotlight ads on homepage</li>
+                <li>10% discount on paid workshops</li>
+            </ul>
+            <button type="button" class="close" aria-label="Close dialog">Close</button>
+        </dialog>
+        
+        <dialog id="goldModal">
+            <h3>Gold Membership Benefits</h3>
+            <ul>
+                <li>All Silver perks</li>
+                <li>Priority speaking slots at events</li>
+                <li>Dedicated account manager</li>
+                <li>25% discount on all chamber services</li>
+            </ul>
+            <button type="button" class="close" aria-label="Close dialog">Close</button>
+        </dialog>
+        </div>
     </main>
+    <footer>
+        <div class="footer-top">
+            <div class="footer-contact">
+                <p><strong>Mexico City Chamber of Commerce</strong></p>
+                <p>Paseo de la Reforma 43</p>
+                <p>Cuauthemoc, CDMX 11000</p>
+                <p>Email: cdmx@chamberofCom.org</p>
+                <p>Phone: (223) 555-2300</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.youtube.com/" aria-label="YouTube" target="_blank" rel="noopener">
+                    <img src="images/youtube.svg" alt="YouTube icon" width="32" height="32">
+                </a>
+                <a href="https://x.com/" aria-label="Twitter" target="_blank" rel="noopener">
+                    <img src="images/twitter.svg" alt="Twitter icon" width="32" height="32">
+                </a>
+                <a href="https://www.linkedin.com/" aria-label="LinkedIn" target="_blank" rel="noopener">
+                    <img src="images/linkedIn.svg" alt="LinkedIn icon" width="32" height="32">
+                </a>
+            </div>
+            <div class="footer-info">
+                <p>WDD231 Web Frontend Development</p>
+                <p>© <span id="currentYear"></span> Efrain Ochoa, MEX 🇲🇽 </p>
+                <p>Last modification: <span id="lastModified"></span></p>
+            </div>
+        </div>
+    </footer>
+    <script src="scripts/index.js" defer></script>
+    <script src="scripts/join.js" defer></script>
 </body>
 </html>
