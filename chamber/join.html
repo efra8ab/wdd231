@@ -25,7 +25,7 @@
         <div class = "header-brand">
             <img src="images/cdmx_logo.webp" alt="Mexico City Logo">
             <div class="brand-text">
-                <h2>Mexico City Chamber of Commerce</h2>
+                <h2>Mexico City Chamber of Commerce - Join Us</h2>
             </div>
         </div>
     </header>
@@ -41,5 +41,58 @@
             <li><a href="#">Discover</a></li>
         </ul>
     </nav>
+
+    <main>
+        <h1>Become a Chamber Member</h1>
+        <form id="joinForm" class="join-form" method="get" action="thankyou.html">
+            <label title="Please enter your first name">
+                First Name
+                <input type="text" name="firstName" required autocomplete="first-name">
+            </label>
+            
+            <label title="Please enter your last name">
+                Last Name
+                <input type="text" name="lastName" required autocomplete="last-name">
+            </label>
+            
+            <label title="Your title within the organization">
+                Organizational Title
+                <input type="text" name="organizationTitle" autocomplete="organization-title" pattern="[A-Za-z\\s\\-]{7,}" placeholder="Marketing Manager">
+            </label>
+
+            <label title="To follow up with your request">
+                Email Address
+                <input type="email" name="email" required autocomplete="email" placeholder="you@example.com">
+            </label>
+
+            <label title="Best phone number to get in touch">
+                Phone Number
+                <input type="tel" required name="phone" autocomplete="tel">
+            </label>
+
+            <label title="Organisation or business name">
+                Business / Organisation Name
+                <input type="text" name="organization" required autocomplete="organization" />
+            </label>
+
+            <label title="Select a membership level">
+                Membership Level
+                <select name="membershipLevel" id="membershipLevel" required>
+                    <option value="np">NP - Non-profit (Free)</option>
+                    <option value="bronze">Bronze</option>
+                    <option value="silver">Silver</option>
+                    <option value="gold">Gold</option>
+                </select>
+            </label>
+
+            <label title="Tell us about your organization">
+                Organization Description
+                <textarea name="description" rows="4" placeholder="Brief description"></textarea>
+            </label>
+
+            <input type="hidden" name="timestamp" id="timestamp">
+            <input type="submit" value="Submit Application">
+        </form>
+    </main>
 </body>
 </html>
