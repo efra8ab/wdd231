@@ -1,0 +1,160 @@
+@import url("index.css");
+
+.discover-intro {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.discover-intro h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.discover-intro p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+/* Visit-message */
+#visit-message {
+    background-color: #eef6fd;
+    color: var(--text-color);
+    padding: 1rem;
+    border-radius: var(--radius);
+    box-shadow: 0 1px 3px var(--shadow);
+    margin-bottom: 2rem;
+}
+
+/* Grid container */
+.discover-grid {
+    display: grid;
+    gap: 1rem;
+    /* small screens */
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6"
+        "card7"
+        "card8";
+}
+
+/* Card basics */
+.discover-card {
+    background-color: var(--background-color);
+    border-radius: var(--radius);
+    box-shadow: 0 2px 5px var(--shadow);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.discover-card figure {
+    margin: 0;
+}
+
+.discover-card figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* Title, address, text, button */
+.discover-card h2 {
+    font-size: 1.5rem;
+    margin: 1rem;
+    color: var(--primary-color);
+}
+
+.discover-card address {
+    font-style: normal;
+    margin: 0 1rem 0.5rem;
+    color: var(--accent-color);
+}
+
+.discover-card p {
+    flex: 1;
+    margin: 0 1rem 1rem;
+    color: var(--text-color);
+}
+
+.discover-card button {
+    background-color: var(--accent-color);
+    color: #fff;
+    border: none;
+    padding: 0.75rem;
+    margin: 0 1rem 1rem;
+    border-radius: var(--radius);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.discover-card button:hover {
+    background-color: darken(var(--accent-color), 10%);
+}
+
+/* Medium screens*/
+@media (min-width: 641px) and (max-width: 1024px) {
+    .discover-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "card1 card2"
+            "card3 card4"
+            "card5 card6"
+            "card7 card8";
+    }
+}
+
+/* Zoom effect*/
+@media (min-width: 641px) {
+  .discover-card figure img:hover {
+    transform: scale(1.05);
+  }
+}
+
+/* Large screens*/
+@media (min-width: 1025px) {
+    .discover-grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "card1 card2 card3 card4"
+            "card5 card6 card7 card8";
+    }
+}
+
+.card1 {
+    grid-area: card1;
+}
+
+.card2 {
+    grid-area: card2;
+}
+
+.card3 {
+    grid-area: card3;
+}
+
+.card4 {
+    grid-area: card4;
+}
+
+.card5 {
+    grid-area: card5;
+}
+
+.card6 {
+    grid-area: card6;
+}
+
+.card7 {
+    grid-area: card7;
+}
+
+.card8 {
+    grid-area: card8;
+}

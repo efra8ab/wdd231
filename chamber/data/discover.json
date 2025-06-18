@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "name": "Chapultepec Castle",
+        "address": "Bosque de Chapultepec I Secc, Miguel Hidalgo, 11100 CDMX",
+        "description": "A historic castle with panoramic city views and museums inside.",
+        "image": "images/castillo_chapultepec.webp",
+        "alt": "Chapultepec Castle"
+    },
+    {
+        "id": 2,
+        "name": "Palacio de Bellas Artes",
+        "address": "Av. Juárez S/N, Centro Histórico, 06050 CDMX",
+        "description": "An iconic cultural center known for its murals and performances.",
+        "image": "images/bellas_artes.webp",
+        "alt": "Palacio de Bellas Artes"
+    },
+    {
+        "id": 3,
+        "name": "Frida Kahlo Museum",
+        "address": "Londres 247, Del Carmen, Coyoacán, 04100 CDMX",
+        "description": "The famous blue house where artist Frida Kahlo lived and worked.",
+        "image": "images/museo_frida.webp",
+        "alt": "Frida Kahlo Museum"
+    },
+    {
+        "id": 4,
+        "name": "Zócalo (Main Square)",
+        "address": "Plaza de la Constitución S/N, Centro, 06000 CDMX",
+        "description": "A massive plaza surrounded by historical and government buildings.",
+        "image": "images/zocalo.webp",
+        "alt": "Zócalo"
+    },
+    {
+        "id": 5,
+        "name": "Templo Mayor",
+        "address": "Seminario 8, Centro Histórico, 06060 CDMX",
+        "description": "Aztec temple ruins located in the heart of the historic center.",
+        "image": "images/templo_mayor.webp",
+        "alt": "Templo Mayor"
+    },
+    {
+        "id": 6,
+        "name": "Xochimilco Canals",
+        "address": "Embarcadero Nuevo Nativitas, Xochimilco, 16400 CDMX",
+        "description": "Colorful boats float along ancient canals with music and food.",
+        "image": "images/xochimilco.webp",
+        "alt": "Xochimilco Canals"
+    },
+    {
+        "id": 7,
+        "name": "Coyoacán",
+        "address": "Centro de Coyoacán, Coyoacán, 04000 CDMX",
+        "description": "A charming colonial neighborhood with markets and leafy plazas.",
+        "image": "images/coyoacan.webp",
+        "alt": "Coyoacán"
+    },
+    {
+        "id": 8,
+        "name": "Soumaya Museum",
+        "address": "Plaza Carso, Blvd. Miguel de Cervantes Saavedra 303, 11529 CDMX",
+        "description": "A modern, silver-clad museum with art by Rodin, Dalí, and more.",
+        "image": "images/soumaya.webp",
+        "alt": "Soumaya Museum"
+    }
+]
