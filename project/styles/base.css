@@ -1,7 +1,7 @@
 /* Root Variables */
 :root {
     --color-main: #F5F5F5;
-    --color-accent: #A67C52;
+    --color-accent: #674F32;
     --color-background: #2E2E2E;
     --font-heading: 'Merriweather', serif;
     --font-body: 'Roboto', sans-serif;
@@ -11,7 +11,7 @@
 body {
     font-family: 'Comfortaa', 'Roboto';
     background-color: var(--color-background);
-    color: var(--color-accent);
+    color: var(--color-main);
     margin: 0;
     padding: 0;
     line-height: 1.6;
