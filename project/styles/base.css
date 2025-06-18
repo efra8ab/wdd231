@@ -1,0 +1,82 @@
+/* Root Variables */
+:root {
+    --color-main: #F5F5F5;
+    --color-accent: #A67C52;
+    --color-background: #2E2E2E;
+    --font-heading: 'Merriweather', serif;
+    --font-body: 'Roboto', sans-serif;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Comfortaa', 'Roboto';
+    background-color: var(--color-background);
+    color: var(--color-accent);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: var(--color-accent);
+    color: var(--color-main);
+    text-align: center;
+    padding: 1rem;
+    font-family: var(--font-heading);
+}
+
+/* Main Content */
+main {
+    padding: 2rem;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-heading);
+    color: var(--color-main);
+}
+
+ul {
+    padding-left: 1.2rem;
+}
+
+/* Wireframe Images */
+section#wireframes img {
+    display: block;
+    margin: 1rem auto;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-accent);
+    color: var(--color-main);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+.footer-social {
+    margin-bottom: 1rem;
+}
+
+.footer-social img {
+    margin: 0 0.5rem;
+    filter: brightness(0) invert(1); }
+
+
+/* Wireframe Flex Container */
+.wireframe-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.wireframe-container div {
+    text-align: center;
+}
