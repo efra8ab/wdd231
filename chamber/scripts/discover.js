@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 article.innerHTML = `
             <figure>
-              <img src="${item.image}" alt="${item.alt}">
+              <img src="${item.image}" alt="${item.alt}" loading="lazy">
             </figure>
             <h2>${item.name}</h2>
             <address>${item.address}</address>
