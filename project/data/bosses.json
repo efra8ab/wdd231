@@ -1,0 +1,137 @@
+[
+    {
+        "id": 1,
+        "name": "Margit, the Fell Omen",
+        "location": "Stormhill, Limgrave",
+        "difficulty": "Medium",
+        "category": "Main Story",
+        "weakness": "Slash, Holy",
+        "imageUrl": "images/margit.webp"
+    },
+    {
+        "id": 2,
+        "name": "Godrick the Grafted",
+        "location": "Stormveil Castle, Limgrave",
+        "difficulty": "Medium",
+        "category": "Main Story",
+        "weakness": "Fire, Bleed",
+        "imageUrl": "images/godrick.webp"
+    },
+    {
+        "id": 3,
+        "name": "Rennala, Queen of the Full Moon",
+        "location": "Raya Lucaria Academy, Liurnia",
+        "difficulty": "Easy-Medium",
+        "category": "Main Story",
+        "weakness": "Physical (Phase 1), Bleed (Phase 2)",
+        "imageUrl": "images/rennala.webp"
+    },
+    {
+        "id": 4,
+        "name": "Starscourge Radahn",
+        "location": "Redmane Castle, Caelid",
+        "difficulty": "Hard",
+        "category": "Main Story (Quest-linked)",
+        "weakness": "Magic, Rot",
+        "imageUrl": "images/radahn.webp"
+    },
+    {
+        "id": 5,
+        "name": "Morgott, the Omen King",
+        "location": "Leyndell, Royal Capital",
+        "difficulty": "Hard",
+        "category": "Main Story",
+        "weakness": "Holy",
+        "imageUrl": "images/morgott.webp"
+    },
+    {
+        "id": 6,
+        "name": "Fire Giant",
+        "location": "Mountaintops of the Giants",
+        "difficulty": "Hard",
+        "category": "Main Story",
+        "weakness": "Fire (phase 1), Slash, Black Flame",
+        "imageUrl": "images/fire_giant.webp"
+    },
+    {
+        "id": 7,
+        "name": "Godskin Duo",
+        "location": "Crumbling Farum Azula",
+        "difficulty": "Very Hard",
+        "category": "Main Story",
+        "weakness": "Sleep, Bleed",
+        "imageUrl": "images/godskin_duo.webp"
+    },
+    {
+        "id": 8,
+        "name": "Maliketh, the Black Blade",
+        "location": "Crumbling Farum Azula",
+        "difficulty": "Very Hard",
+        "category": "Main Story",
+        "weakness": "Lightning, Magic",
+        "imageUrl": "images/maliketh.webp"
+    },
+    {
+        "id": 9,
+        "name": "Sir Gideon Ofnir",
+        "location": "Leyndell, Ashen Capital",
+        "difficulty": "Medium",
+        "category": "Main Story",
+        "weakness": "Stagger, Bleed",
+        "imageUrl": "images/gideon.webp"
+    },
+    {
+        "id": 10,
+        "name": "Godfrey / Hoarah Loux",
+        "location": "Leyndell, Ashen Capital",
+        "difficulty": "Very Hard",
+        "category": "Main Story",
+        "weakness": "Bleed, Scarlet Rot",
+        "imageUrl": "images/godfrey.webp"
+    },
+    {
+        "id": 11,
+        "name": "Radagon / Elden Beast",
+        "location": "Elden Throne",
+        "difficulty": "Very Hard",
+        "category": "Final Boss",
+        "weakness": "Radagon: Lightning; Elden Beast: Holy",
+        "imageUrl": "images/radagon.webp"
+    },
+    {
+        "id": 12,
+        "name": "Rykard, Lord of Blasphemy",
+        "location": "Volcano Manor, Mt. Gelmir",
+        "difficulty": "Medium-Hard",
+        "category": "Optional Shardbearer",
+        "weakness": "Serpent-Hunter Spear",
+        "imageUrl": "images/rykard.webp"
+    },
+    {
+        "id": 13,
+        "name": "Mohg, Lord of Blood",
+        "location": "Mohgwyn Palace",
+        "difficulty": "Very Hard",
+        "category": "Optional Shardbearer",
+        "weakness": "Bleed, Fire",
+        "imageUrl": "images/mohg.webp"
+    },
+    {
+        "id": 14,
+        "name": "Dragonlord Placidusax",
+        "location": "Crumbling Farum Azula",
+        "difficulty": "Very Hard",
+        "category": "Optional Secret",
+        "weakness": "Lightning, Frost",
+        "imageUrl": "images/placidusax.webp"
+    },
+    {
+        "id": 15,
+        "name": "Malenia, Blade of Miquella",
+        "location": "Elphael, Haligtree",
+        "difficulty": "Extremely Hard",
+        "category": "Optional Secret",
+        "weakness": "Bleed, Frost",
+        "imageUrl": "images/malenia.webp"
+    }
+]

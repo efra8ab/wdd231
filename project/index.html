@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elden Ring Companion</title>
+    <meta name="description" content="Elden Ring boss checklist and randomized build generator.">
+    <meta name="author" content="Efrain Ochoa">
+    <meta property="og:title" content="Elden Ring Companion">
+    <meta property="og:description" content="Track your boss progress and discover fun builds for Elden Ring.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourusername.github.io/wdd231/final/index.html">
+    <meta property="og:image" content="images/og-image.jpg">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="header-title">
+      <img src="images/elden_ring.webp" altz="Elden Ring Companion logo" class="title-logo">
+      <h1>Elden Ring Companion</h1>
+    </div>
+  </header>
+    <main>
+        <section class="main-layout">
+          <div class="main-image">
+            <img src="images/guiding_tarnished.webp" alt="Helping the tarnished">
+          </div>
+          <div class="main-menu">
+            <ul>
+              <li><a href="bosses.html">Boss checklist</a></li>
+              <li><a href="progress.html">View progress</a></li>
+              <li><a href="builds.html">Random build generator</a></li>
+              <li><a href="about.html">About</a></li>
+            </ul>
+          </div>
+        </section>
+        <!-- Dynamic content will be injected here by JavaScript -->
+    </main>
+
+    <footer>
+        <div class="footer-top">
+            <div class="footer-social">
+                <a href="https://x.com/" aria-label="Twitter" target="_blank" rel="noopener">
+                    <img src="images/twitter.svg" alt="Twitter icon" width="32" height="32">
+                </a>
+                <a href="https://www.linkedin.com/" aria-label="linkedin" target="_blank" rel="noopener">
+                    <img src="images/linkedin.svg" alt="linkedin icon" width="32" height="32">
+                </a>
+            </div>
+            <div class="footer-info">
+                <p>Elden Ring Companion</p>
+                <p>© <span id="currentYear"></span> Efrain Ochoa, MEX 🇲🇽 </p>
+                <p>Last modification: <span id="lastModified"></span></p>
+            </div>
+        </div>
+    </footer>
+    <script src="scripts/last_modification.js"></script>
+</body>
+
+</html>

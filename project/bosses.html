@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boss Checklist – Elden Ring Companion</title>
+    <meta name="description" content="Track which Elden Ring bosses you've defeated with an interactive checklist.">
+    <meta name="author" content="Efrain Ochoa">
+    <meta property="og:title" content="Boss Checklist – Elden Ring Companion">
+    <meta property="og:description"
+        content="Track which Elden Ring bosses you've defeated with an interactive checklist.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourusername.github.io/wdd231/final/bosses.html">
+    <meta property="og:image" content="images/og-image.jpg">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="header-title">
+            <img src="images/elden_ring.webp" alt="Elden Ring Companion logo" class="title-logo">
+            <h1>Boss Checklist</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="boss-checklist">
+            <h2>Your Boss Progress</h2>
+            <ul id="bossList">
+                <!--Bosses info-->
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-top">
+            <div class="footer-social">
+                <a href="https://x.com/" aria-label="Twitter" target="_blank" rel="noopener">
+                    <img src="images/twitter.svg" alt="Twitter icon" width="32" height="32">
+                </a>
+                <a href="https://www.linkedin.com/" aria-label="LinkedIn" target="_blank" rel="noopener">
+                    <img src="images/linkedin.svg" alt="LinkedIn icon" width="32" height="32">
+                </a>
+            </div>
+            <div class="footer-info">
+                <p>Elden Ring Companion</p>
+                <p>© <span id="currentYear"></span> Efrain Ochoa, MEX 🇲🇽</p>
+                <p>Last modification: <span id="lastModified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="scripts/bosses.js"></script>
+    <script src="scripts/last_modification.js"></script>
+
+    <div id="infoModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h3 id="modalTitle"></h3>
+        <div id="modalBody"></div>
+      </div>
+    </div>
+</body>
+
+</html>
