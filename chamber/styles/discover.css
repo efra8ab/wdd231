@@ -95,7 +95,7 @@
 }
 
 .discover-card button:hover {
-    background-color: darken(var(--accent-color), 10%);
+    filter: brightness(90%);
 }
 
 /* Medium screens*/
