@@ -1,0 +1,148 @@
+{
+    "rightHandWeapons": [
+        {
+            "id": "longsword",
+            "name": "Longsword"
+        },
+        {
+            "id": "claymore",
+            "name": "Claymore"
+        },
+        {
+            "id": "greatsword",
+            "name": "Greatsword"
+        },
+        {
+            "id": "sword_of_night_and_flame",
+            "name": "Sword of Night and Flame"
+        },
+        {
+            "id": "blasphemous_blade",
+            "name": "Blasphemous Blade"
+        },
+        {
+            "id": "rivers_of_blood",
+            "name": "Rivers of Blood"
+        },
+        {
+            "id": "grafted_blade",
+            "name": "Grafted Blade Greatsword"
+        },
+        {
+            "id": "godskin_peeler",
+            "name": "Godskin Peeler"
+        },
+        {
+            "id": "bolt_of_gransax",
+            "name": "Bolt of Gransax"
+        },
+        {
+            "id": "guardian_spear",
+            "name": "Guardian’s Spear"
+        },
+        {
+            "id": "rapier",
+            "name": "Rapier"
+        },
+        {
+            "id": "uchigatana",
+            "name": "Uchigatana"
+        },
+        {
+            "id": "halberd",
+            "name": "Halberd"
+        },
+        {
+            "id": "mornes_great_hammer",
+            "name": "Morne’s Great Hammer"
+        },
+        {
+            "id": "dark_moon_greatsword",
+            "name": "Dark Moon Greatsword"
+        }
+    ],
+    "leftHandWeapons": [
+        {
+            "id": "kite_shield",
+            "name": "Kite Shield"
+        },
+        {
+            "id": "great_turtle_shell",
+            "name": "Great Turtle Shell"
+        },
+        {
+            "id": "caestus",
+            "name": "Caestus"
+        },
+        {
+            "id": "man_serpent_hatchet",
+            "name": "Man-Serpent Hatchet"
+        },
+        {
+            "id": "lion_greatbow",
+            "name": "Lion Greatbow"
+        },
+        {
+            "id": "carian_regal_sceptre",
+            "name": "Carian Regal Sceptre"
+        },
+        {
+            "id": "crucible_axe",
+            "name": "Crucible Axe"
+        },
+        {
+            "id": "hornet_stinger",
+            "name": "Hornet Stinger"
+        },
+        {
+            "id": "dragonscale_shield",
+            "name": "Dragonscale Shield"
+        },
+        {
+            "id": "catherine_wheel",
+            "name": "Catherine’s Wheel"
+        }
+    ],
+    "amulets": [
+        {
+            "id": "gold_scarab",
+            "name": "Gold Scarab"
+        },
+        {
+            "id": "dragoncrest_greatshield_talisman",
+            "name": "Dragoncrest Greatshield Talisman"
+        },
+        {
+            "id": "erdtrees_favor",
+            "name": "Erdtree’s Favor"
+        },
+        {
+            "id": "radagon_icon",
+            "name": "Radagon Icon"
+        },
+        {
+            "id": "lord_of_bloods_exultation",
+            "name": "Lord of Blood’s Exultation"
+        },
+        {
+            "id": "erdtrees_favor_plus",
+            "name": "Erdtree’s Favor +2"
+        },
+        {
+            "id": "fire_scorpion_charm",
+            "name": "Fire Scorpion Charm"
+        },
+        {
+            "id": "feral_boar_talisman",
+            "name": "Feral Boar Talisman"
+        },
+        {
+            "id": "starscourge_heirloom",
+            "name": "Starscourge Heirloom"
+        },
+        {
+            "id": "bolt_of_gransax_talisman",
+            "name": "Bolt of Gransax"
+        }
+    ]
+}

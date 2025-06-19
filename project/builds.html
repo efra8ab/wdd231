@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Build Catalog – Elden Ring Companion</title>
+    <meta name="description"
+        content="Create and view your custom Elden Ring builds—choose weapons, amulets, stats, and more.">
+    <meta name="author" content="Efrain Ochoa">
+    <meta property="og:title" content="Build Catalog – Elden Ring Companion">
+    <meta property="og:description"
+        content="Create and view your custom Elden Ring builds—choose weapons, amulets, stats, and more.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://efra8ab.github.io/wdd231/final/builds.html">
+    <meta property="og:image" content="images/elden_ring.webp">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="header-title">
+            <img src="images/elden_ring.webp" alt="Elden Ring Companion logo" class="title-logo">
+            <h1>Build Catalog</h1>
+        </div>
+    </header>
+
+    <nav class="nav-menu" aria-label="Main navigation">
+        <button class="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="bosses.html">Boss Checklist</a></li>
+            <li><a href="builds.html" aria-current="page">Build Catalog</a></li>
+            <li><a href="progress.html">Progress</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="build-form-section">
+            <h2>Submit a New Build</h2>
+            <form id="buildForm">
+                <fieldset>
+                    <legend>Create Your Build</legend>
+
+                    <!-- Right-hand weapons -->
+                    <label for="rh1">Right Hand – Primary <span aria-hidden="true">*</span></label>
+                    <select id="rh1" name="rh1" required>
+                        <option value="">Loading…</option>
+                    </select>
+
+                    <label for="rh2">Right Hand – Secondary</label>
+                    <select id="rh2" name="rh2">
+                        <option value="">None</option>
+                    </select>
+
+                    <!-- Left-hand weapons -->
+                    <label for="lh1">Left Hand – Primary</label>
+                    <select id="lh1" name="lh1">
+                        <option value="">None</option>
+                    </select>
+
+                    <label for="lh2">Left Hand – Secondary</label>
+                    <select id="lh2" name="lh2">
+                        <option value="">None</option>
+                    </select>
+
+                    <!-- Amulets -->
+                    <div class="amulets-group">
+                        <label>Amulets (choose up to 4):</label>
+                        <div id="amuletSelectors">
+                            <!-- amulets here -->
+                        </div>
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="stats-group">
+                        <label>Stats Distribution:</label>
+                        <div id="statsInputs">
+                            <!--Stats here -->
+                        </div>
+                    </div>
+
+                    <!-- Backstory / Notes -->
+                    <label for="notes">Backstory / Notes</label>
+                    <textarea id="notes" name="notes" rows="4" placeholder="Add context, strategy, lore…"></textarea>
+
+                    <button type="submit">Save Build</button>
+                </fieldset>
+            </form>
+        </section>
+
+
+        <section class="saved-builds">
+            <h2>Your Saved Builds</h2>
+            <div id="buildList">
+                <!-- saved builds here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-top">
+            <div class="footer-social">
+                <a href="https://x.com/" aria-label="Twitter" target="_blank" rel="noopener">
+                    <img src="images/twitter.svg" alt="Twitter icon" width="32" height="32">
+                </a>
+                <a href="https://www.linkedin.com/" aria-label="LinkedIn" target="_blank" rel="noopener">
+                    <img src="images/linkedin.svg" alt="LinkedIn icon" width="32" height="32">
+                </a>
+            </div>
+            <div class="footer-info">
+                <p>Elden Ring Companion</p>
+                <p>© <span id="currentYear"></span> Efrain Ochoa, MEX 🇲🇽</p>
+                <p>Last modification: <span id="lastModified"></span></p>
+                <p>
+                    <a href="attributions.html">Attributions</a> 
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="scripts/builds.js"></script>
+    <script src="scripts/last_modification.js"></script>
+
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" aria-label="Close modal">&times;</span>
+            <h3 id="modalTitle"></h3>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+</body>
+
+</html>

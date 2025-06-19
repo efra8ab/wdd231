@@ -1,21 +1,18 @@
 
-/* ─── Variables ───────────────────────────────────────────────────────────── */
 :root {
-    /* Color Palette */
+
     --color-bg: #2E2E2E;
     --color-surface: #674F32;
     --color-primary: #F5F5F5;
     --color-secondary: #151c36;
     --color-text: #f5f5f5;
 
-    /* Spacing & Layout */
     --spacing-sm: 0.5rem;
     --spacing: 1rem;
     --spacing-lg: 2rem;
     --max-width: 1200px;
 }
 
-/* ─── Reset & Box Sizing ───────────────────────────────────────────────────── */
 *,
 *::before,
 *::after {
@@ -24,7 +21,6 @@
     padding: 0;
 }
 
-/* ─── Base Typography & Layout ─────────────────────────────────────────────── */
 html {
     font-size: 100%;
 }
@@ -39,7 +35,6 @@ body {
     line-height: 1.6;
 }
 
-/* ─── Links ───────────────────────────────────────────────────────────────── */
 a {
     color: var(--color-primary);
     text-decoration: none;
@@ -50,10 +45,13 @@ a:focus {
     text-decoration: underline;
 }
 
-/* ─── Header ──────────────────────────────────────────────────────────────── */
 header {
     background-color: var(--color-surface);
     padding: var(--spacing);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .header-title {
@@ -76,7 +74,6 @@ header {
     font-size: 1.5rem;
 }
 
-/* ─── Main Layout ─────────────────────────────────────────────────────────── */
 main {
     flex: 1;
     max-width: var(--max-width);
@@ -119,7 +116,6 @@ main {
     color: var(--color-primary);
 }
 
-/* ─── Footer ──────────────────────────────────────────────────────────────── */
 footer {
     background-color: var(--color-surface);
     padding: var(--spacing);
@@ -144,7 +140,7 @@ footer {
     color: var(--color-primary);
 }
 
-/* ─── Responsive Breakpoints ──────────────────────────────────────────────── */
+
 @media (max-width: 768px) {
     .main-layout {
         grid-template-columns: 1fr;
@@ -160,18 +156,119 @@ footer {
     }
 }
 
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    gap: var(--spacing);
+    margin: 0;
+    padding: 0;
+}
 
-/* ─── Boss Checklist Styles ───────────────────────────────────────── */
+.nav-menu {
+    display: flex;
+    background-color: var(--color-surface);
+    padding: var(--spacing) 0;
+}
+.nav-menu a {
+    background-color: var(--color-surface);
+    color: var(--color-primary);
+    text-decoration: none;
+    padding: var(--spacing-sm) var(--spacing);
+    display: block;
+    font-weight: 600;
+    border-radius: 4px;
+    margin: 0 var(--spacing-sm);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.nav-menu a:hover,
+.nav-menu a:focus {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+}
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: var(--spacing);
+}
+.hamburger span {
+    display: block;
+    width: 2.5rem;
+    height: 4px;
+    background: var(--color-secondary);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
 
-/* Boss Checklist Grid Container */
+.hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+@media (max-width: 768px) {
+
+    .nav-menu {
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--color-surface);
+        position: static;
+        z-index: 1000;
+    }
+
+    .nav-menu ul{
+        display: none;
+    }
+
+    .nav-menu.open ul {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing);
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        gap: var(--spacing);
+    }
+    .nav-menu ul li {
+        margin: var(--spacing-sm) 0;
+    }
+}
+
+
 ul#bossList {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-template-columns: 1fr;
     gap: var(--spacing);
     padding: 0;
     list-style: none;
     width: 100%;
 }
+
+@media (min-width: 600px) {
+    ul#bossList {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+    ul#bossList {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 
 .boss-checklist li {
     display: flex;
@@ -185,7 +282,7 @@ ul#bossList {
     flex-direction: column;
     align-items: center;
 }
-/* Boss name under image */
+
 .boss-checklist label {
     margin-top: var(--spacing-sm);
     display: block;
@@ -208,14 +305,13 @@ ul#bossList {
 .boss-info span {
     font-size: 0.875rem;
 }
-/* Checkbox for boss checklist */
+
 .boss-checklist input[type="checkbox"] {
     width: 1.5rem;
     height: 1.5rem;
     margin-right: var(--spacing-sm);
 }
 
-/* ─── Modal Styles ─────────────────────────────────────────────────── */
 .modal {
   display: none;
   position: fixed;
@@ -252,4 +348,90 @@ ul#bossList {
 }
 .more-info-btn:hover {
   opacity: 0.9;
+}
+
+.build-form-section {
+    background-color: var(--color-surface);
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    border-radius: 8px;
+}
+.build-form-section h2 {
+    margin-bottom: var(--spacing);
+    color: var(--color-primary);
+    font-family: 'Comfortaa', sans-serif;
+    text-align: center;
+}
+#buildForm fieldset {
+    border: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing);
+}
+#buildForm legend {
+    grid-column: 1 / -1;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing);
+    color: var(--color-primary);
+}
+#buildForm label {
+    display: block;
+    margin-bottom: var(--spacing-sm);
+    font-weight: 600;
+}
+#buildForm select,
+#buildForm input[type="number"],
+#buildForm textarea {
+    width: 100%;
+    padding: var(--spacing-sm);
+    border: 2px solid var(--color-primary);
+    border-radius: 4px;
+    background-color: var(--color-bg);
+    color: var(--color-primary);
+}
+#buildForm textarea {
+    resize: vertical;
+}
+#buildForm button[type="submit"] {
+    grid-column: 1 / -1;
+    padding: var(--spacing) var(--spacing-lg);
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    justify-self: center;
+}
+#buildForm button[type="submit"]:hover {
+    background-color: var(--color-secondary);
+}
+@media (max-width: 600px) {
+    #buildForm fieldset {
+        grid-template-columns: 1fr;
+    }
+}
+
+.saved-builds .build-card {
+    background-color: var(--color-surface);
+    padding: var(--spacing);
+    margin-bottom: var(--spacing);
+    border-radius: 8px;
+}
+.saved-builds .build-card h3 {
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-primary);
+}
+.saved-builds .build-card p,
+.saved-builds .build-card .build-stats span {
+    color: var(--color-text);
+    margin-bottom: var(--spacing-sm);
+}
+.saved-builds .build-card .build-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing);
 }
