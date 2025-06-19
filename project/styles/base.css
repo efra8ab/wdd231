@@ -68,7 +68,7 @@ header {
 }
 
 .header-title h1 {
-    font-family: 'Comfortaa', sans-serif;
+    font-family: 'Comfortaa', 'Roboto';
     font-weight: 700;
     color: var(--color-primary);
     font-size: 1.5rem;
@@ -359,7 +359,7 @@ ul#bossList {
 .build-form-section h2 {
     margin-bottom: var(--spacing);
     color: var(--color-primary);
-    font-family: 'Comfortaa', sans-serif;
+    font-family: 'Comfortaa', 'Roboto';
     text-align: center;
 }
 #buildForm fieldset {
